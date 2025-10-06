@@ -1,0 +1,91 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renta de Autos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Renta de Autos</h1>
+        <nav>
+            <button onclick="mostrarSeccion('inicio')">Inicio</button>
+            <button onclick="mostrarSeccion('registrar')">Registrar Auto</button>
+            <button onclick="mostrarSeccion('ver-autos')">Ver Autos</button>
+            <button onclick="mostrarSeccion('empleados')">Registrar Empleados</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección de inicio -->
+        <section id="inicio" class="seccion">
+            <h2>Bienvenido a la Renta de Autos</h2>
+            <p>Utiliza el menú para navegar entre secciones</p>
+            <img src="imajen/carro1.jpeg">
+        </section>
+
+        <!-- Sección de registro de autos -->
+        <section id="registrar" class="seccion oculto">
+            <h2>Registrar Auto</h2>
+            <form id="car-form">
+                <input type="text" id="marca" placeholder="Marca" required><br>
+                <input type="text" id="modelo" placeholder="Modelo" required><br>
+                <input type="number" id="precio" placeholder="Precio por día" required><br>
+                <input type="url" id="imagen" placeholder="URL de la imagen (opcional)"><br>
+                <button type="submit">Agregar Auto</button>
+            </form>
+
+            <h3>Autos Registrados</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Imagen</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Precio por día</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cars-table-body"></tbody>
+            </table>
+        </section>
+
+        <!-- Sección de ver autos -->
+        <section id="ver-autos" class="seccion oculto">
+            <h2>Galería de Autos</h2>
+            <div id="autos-galeria" class="galeria-autos"></div>
+        </section>
+
+        <!-- Sección de empleados -->
+        <section id="empleados" class="seccion oculto">
+            <h2>Registrar Empleado</h2>
+            <form id="empleado-form">
+                <input type="text" id="nombre-empleado" placeholder="Nombre" required><br>
+                <input type="number" id="edad-empleado" placeholder="Edad" required><br>
+                <input type="email" id="correo-empleado" placeholder="Correo" required><br>
+                <input type="tel" id="telefono-empleado" placeholder="Teléfono" required><br>
+                <input type="number" id="sueldo-empleado" placeholder="Sueldo" required><br>
+                <button type="submit">Agregar Empleado</button>
+            </form>
+
+            <h3>Empleados Registrados</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Sueldo</th>
+                    </tr>
+                </thead>
+                <tbody id="empleados-table-body"></tbody>
+            </table>
+        </section>
+        <script src="jva.js"></script>
+    </main>
+
+    
+
+
+        
